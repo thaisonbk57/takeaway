@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
         deliveryCosts: 200,
         minCost: 1000,
         topRestaurants: 20234.5
-      }
+      },
+      _id: 0
     },
     {
       name: "Tandoori Express",
@@ -28,7 +29,8 @@ document.addEventListener("DOMContentLoaded", function() {
         deliveryCosts: 150,
         minCost: 1300,
         topRestaurants: 283888.5
-      }
+      },
+      _id: 1
     },
     {
       name: "Royal Thai",
@@ -43,7 +45,8 @@ document.addEventListener("DOMContentLoaded", function() {
         deliveryCosts: 150,
         minCost: 2500,
         topRestaurants: 116120.5
-      }
+      },
+      _id: 2
     },
     {
       name: "Sushi One",
@@ -58,7 +61,8 @@ document.addEventListener("DOMContentLoaded", function() {
         deliveryCosts: 0,
         minCost: 1200,
         topRestaurants: 37218
-      }
+      },
+      _id: 3
     },
     {
       name: "Roti Shop",
@@ -73,7 +77,8 @@ document.addEventListener("DOMContentLoaded", function() {
         deliveryCosts: 0,
         minCost: 2000,
         topRestaurants: 186952.5
-      }
+      },
+      _id: 4
     },
     {
       name: "Aarti 2",
@@ -88,7 +93,8 @@ document.addEventListener("DOMContentLoaded", function() {
         deliveryCosts: 250,
         minCost: 500,
         topRestaurants: 70624.5
-      }
+      },
+      _id: 5
     },
     {
       name: "Pizza Heart",
@@ -103,7 +109,8 @@ document.addEventListener("DOMContentLoaded", function() {
         deliveryCosts: 150,
         minCost: 1500,
         topRestaurants: 22081
-      }
+      },
+      _id: 6
     },
     {
       name: "Mama Mia",
@@ -118,7 +125,8 @@ document.addEventListener("DOMContentLoaded", function() {
         deliveryCosts: 0,
         minCost: 1000,
         topRestaurants: 8380
-      }
+      },
+      _id: 7
     },
     {
       name: "Feelfood",
@@ -133,7 +141,8 @@ document.addEventListener("DOMContentLoaded", function() {
         deliveryCosts: 150,
         minCost: 1500,
         topRestaurants: 84696.5
-      }
+      },
+      _id: 8
     },
     {
       name: "Daily Sushi",
@@ -148,7 +157,8 @@ document.addEventListener("DOMContentLoaded", function() {
         deliveryCosts: 200,
         minCost: 1000,
         topRestaurants: 11470
-      }
+      },
+      _id: 9
     },
     {
       name: "Pamukkale",
@@ -163,7 +173,8 @@ document.addEventListener("DOMContentLoaded", function() {
         deliveryCosts: 0,
         minCost: 2000,
         topRestaurants: 58829
-      }
+      },
+      _id: 10
     },
     {
       name: "Indian Kitchen",
@@ -178,7 +189,8 @@ document.addEventListener("DOMContentLoaded", function() {
         deliveryCosts: 150,
         minCost: 1300,
         topRestaurants: 11544.5
-      }
+      },
+      _id: 11
     },
     {
       name: "CIRO 1939",
@@ -193,7 +205,8 @@ document.addEventListener("DOMContentLoaded", function() {
         deliveryCosts: 99,
         minCost: 1300,
         topRestaurants: 312607.5
-      }
+      },
+      _id: 12
     },
     {
       name: "Zenzai Sushi",
@@ -208,7 +221,8 @@ document.addEventListener("DOMContentLoaded", function() {
         deliveryCosts: 0,
         minCost: 2000,
         topRestaurants: 104800
-      }
+      },
+      _id: 13
     },
     {
       name: "Fes Patisserie",
@@ -223,7 +237,8 @@ document.addEventListener("DOMContentLoaded", function() {
         deliveryCosts: 150,
         minCost: 1250,
         topRestaurants: 6910
-      }
+      },
+      _id: 14
     },
     {
       name: "Yvonne's Vispaleis",
@@ -238,7 +253,8 @@ document.addEventListener("DOMContentLoaded", function() {
         deliveryCosts: 150,
         minCost: 1750,
         topRestaurants: 8732
-      }
+      },
+      _id: 15
     },
     {
       name: "De Amsterdamsche Tram",
@@ -253,7 +269,8 @@ document.addEventListener("DOMContentLoaded", function() {
         deliveryCosts: 0,
         minCost: 0,
         topRestaurants: 0
-      }
+      },
+      _id: 16
     },
     {
       name: "Lale Restaurant & Snackbar",
@@ -268,7 +285,8 @@ document.addEventListener("DOMContentLoaded", function() {
         deliveryCosts: 0,
         minCost: 0,
         topRestaurants: 0
-      }
+      },
+      _id: 17
     },
     {
       name: "Lunchpakketdienst",
@@ -283,7 +301,8 @@ document.addEventListener("DOMContentLoaded", function() {
         deliveryCosts: 500,
         minCost: 5000,
         topRestaurants: 3.5
-      }
+      },
+      _id: 18
     }
   ];
 
@@ -293,6 +312,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   //   return {
   //     ...restaurant,
+  //     _id: index,
   //     sortingValues: { ...restaurant.sortingValues, topRestaurants }
   //   };
   // });
