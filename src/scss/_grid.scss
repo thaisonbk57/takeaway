@@ -1,0 +1,103 @@
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+.row {
+  @include clearfix;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+// .col
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: 8.33% * $i;
+    float: left;
+    padding: 0 10px;
+
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+}
+
+@for $i from 0 through 8 {
+  .px-#{$i} {
+    padding-left: 10px * $i;
+    padding-right: 10px * $i;
+  }
+}
+
+@for $i from 0 through 8 {
+  .py-#{$i} {
+    padding-top: 10px * $i;
+    padding-bottom: 10px * $i;
+  }
+}
+
+@for $i from 0 through 8 {
+  .mx-#{$i} {
+    margin-left: 10px * $i;
+    margin-right: 10px * $i;
+  }
+}
+
+@for $i from 0 through 8 {
+  .my-#{$i} {
+    margin-top: 10px * $i;
+    margin-right: 10px * $i;
+  }
+}
+
+@for $i from 0 through 8 {
+  .pl-#{$i} {
+    padding-left: 10px * $i;
+  }
+}
+@for $i from 0 through 8 {
+  .pr-#{$i} {
+    padding-right: 10px * $i;
+  }
+}
+
+@for $i from 0 through 8 {
+  .pt-#{$i} {
+    padding-top: 10px * $i;
+  }
+}
+@for $i from 0 through 8 {
+  .pb-#{$i} {
+    padding-bottom: 10px * $i;
+  }
+}
+
+@for $i from 0 through 8 {
+  .ml-#{$i} {
+    margin-left: 10px * $i;
+  }
+}
+@for $i from 0 through 8 {
+  .mr-#{$i} {
+    margin-right: 10px * $i;
+  }
+}
+
+@for $i from 0 through 8 {
+  .mt-#{$i} {
+    margin-top: 10px * $i;
+  }
+}
+@for $i from 0 through 8 {
+  .mb-#{$i} {
+    margin-bottom: 10px * $i;
+  }
+}

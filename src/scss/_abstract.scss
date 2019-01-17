@@ -1,0 +1,12 @@
+$color-primary: #ef7c1c;
+
+$color-bg-light: #e9f3f9;
+$color-gray-light: #f2f2f2;
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
