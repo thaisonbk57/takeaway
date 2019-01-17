@@ -13,7 +13,28 @@
   </head>
   <body>
     <div class="container">
-      <header class="header"><h1 class="brand">Takeaway</h1></header>
+      <header><h1 class="brand">Takeaway</h1></header>
+      <main>
+        <form id="searchForm" class="searchBar px-2 py-2">
+          <div class="form-group">
+            <input type="text" name="searchKeyword" class="form-control" />
+          </div>
+          <div class="form-group">
+            <select name="sortOption" id="sortOption">
+              <option value="bestMatch">Best Match</option>
+              <option value="newest">Newest</option>
+              <option value="ratingAverage" selected>Rating Average </option>
+              <option value="distance">Distance</option>
+              <option value="popularity">Popularity</option>
+              <option value="averageProductPrice">Avg. Product Price</option>
+              <option value="deliveryCost">Delivery Cost</option>
+              <option value="minCost">Min. Cost</option>
+              <option value="topRestaurants">Top Restaurant</option>
+            </select>
+          </div>
+          <button type="submit" class="searchBtn">Search</button>
+        </form>
+      </main>
     </div>
     <script src="./js/main.js"></script>
   </body>
