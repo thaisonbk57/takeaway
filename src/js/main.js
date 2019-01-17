@@ -287,15 +287,15 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   ];
 
-  const updatedRestaurants = restaurants.map((restaurant, index) => {
-    const { distance, ratingAverage, popularity } = restaurant.sortingValues;
-    const topRestaurants = distance * popularity + ratingAverage;
+  // const updatedRestaurants = restaurants.map((restaurant, index) => {
+  //   const { distance, ratingAverage, popularity } = restaurant.sortingValues;
+  //   const topRestaurants = distance * popularity + ratingAverage;
 
-    return {
-      ...restaurant,
-      sortingValues: { ...restaurant.sortingValues, topRestaurants }
-    };
-  });
+  //   return {
+  //     ...restaurant,
+  //     sortingValues: { ...restaurant.sortingValues, topRestaurants }
+  //   };
+  // });
 
-  console.log(JSON.stringify(updatedRestaurants));
+  // console.log(JSON.stringify(updatedRestaurants));
 });
