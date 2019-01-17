@@ -1,0 +1,14 @@
+header {
+  height: 145px;
+  background: $color-bg-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand {
+  font-size: 36px;
+  text-transform: uppercase;
+  color: $color-primary;
+  letter-spacing: 2px;
+}
