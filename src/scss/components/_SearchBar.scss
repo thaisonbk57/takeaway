@@ -11,8 +11,13 @@
     border-radius: 100px;
     padding: 8px;
     width: 300px;
+    position: relative;
+    transition: all 0.2s;
 
-    &::focus {
+    &:hover {
+      transform: translateY(-3px);
+    }
+    &:focus {
       outline: none;
       border: none;
     }
@@ -31,5 +36,13 @@
     color: white;
     border: none;
     border-radius: 100px;
+    box-shadow: 0px 1px 4px 0 gray;
+    position: relative;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
   }
 }
