@@ -25,6 +25,7 @@
           <div class="form-group">
             <input
               type="text"
+              id="searchKeyword"
               name="searchKeyword"
               class="form-control"
               placeholder="Enter a restaurant's name..."
@@ -43,9 +44,9 @@
               <option value="topRestaurants">Top Restaurant</option>
             </select>
           </div>
-          <button type="submit" class="searchBtn">Search</button>
+          <button type="submit" id="submitBtn" class="searchBtn">Search</button>
         </form>
-        <section class="results">
+        <section class="results" id="results">
           <div class="indices px-2 py-2">
             <div class="row">
               <div class="col-4 text-center">Restaurant</div>
@@ -56,44 +57,18 @@
             </div>
           </div>
           <div class="restaurants px-2 mt-1" id="restaurants">
-            <!-- <template>
-              <div class="row data-id='0' restaurant pb-1 pt-2">
-                <div class="restaurant--name col-4 text-center">
-                  Tanoshii Sushi
-                  <span class="favoriteIcon ml-2 liked">
-                    <i class="far fa-star"></i>
-                  </span>
-                </div>
-                <div class="restaurant--opening-state text-center col-4">
-                  Open
-                </div>
-                <div class="restaurant--sortValue col-4 text-center">4.5</div>
+            <!-- <div class="row data-id='0' restaurant pb-1 pt-2">
+              <div class="restaurant--name col-4 text-center">
+                Tanoshii Sushi
+                <span class="favoriteIcon ml-2 liked">
+                  <i class="far fa-star"></i>
+                </span>
               </div>
-              <div class="row data-id='1' restaurant pb-1 pt-2">
-                <div class="restaurant--name col-4 text-center">
-                  Tanoshii Sushi
-                  <span class="favoriteIcon ml-2 liked">
-                    <i class="far fa-star"></i>
-                  </span>
-                </div>
-                <div class="restaurant--opening-state text-center col-4">
-                  Open
-                </div>
-                <div class="restaurant--sortValue col-4 text-center">4.5</div>
+              <div class="restaurant--opening-state text-center col-4">
+                Open
               </div>
-              <div class="row data-id='2' restaurant pb-1 pt-2">
-                <div class="restaurant--name col-4 text-center">
-                  Tanoshii Sushi
-                  <span class="favoriteIcon ml-2">
-                    <i class="far fa-star"></i>
-                  </span>
-                </div>
-                <div class="restaurant--opening-state text-center col-4">
-                  Open
-                </div>
-                <div class="restaurant--sortValue col-4 text-center">4.5</div>
-              </div>
-            </template> -->
+              <div class="restaurant--sortValue col-4 text-center">4.5</div>
+            </div> -->
           </div>
         </section>
       </main>
