@@ -1,4 +1,25 @@
-document.addEventListener("DOMContentLoaded", function() {
+// const updatedRestaurants = restaurants.map((restaurant, index) => {
+//   const { distance, ratingAverage, popularity } = restaurant.sortingValues;
+//   const topRestaurants = distance * popularity + ratingAverage;
+
+//   return {
+//     ...restaurant,
+//     _id: index,
+//     sortingValues: { ...restaurant.sortingValues, topRestaurants }
+//   };
+// });
+
+// console.log(JSON.stringify(updatedRestaurants));
+
+const DOMStrings = {
+  searchKeyword: "#searchKeyword",
+  sortOptions: "#sortOptions",
+  submitBtn: "#submitBtn",
+  sortOption: "#sortOption",
+  restaurantList: "#restaurants"
+};
+
+const DataController = (function() {
   const restaurants = [
     {
       name: "Tanoshii Sushi",
@@ -306,16 +327,83 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   ];
 
-  // const updatedRestaurants = restaurants.map((restaurant, index) => {
-  //   const { distance, ratingAverage, popularity } = restaurant.sortingValues;
-  //   const topRestaurants = distance * popularity + ratingAverage;
+  const data = {
+    allRestaurants: restaurants,
+    favoriteRestaurants: []
+  };
 
-  //   return {
-  //     ...restaurant,
-  //     _id: index,
-  //     sortingValues: { ...restaurant.sortingValues, topRestaurants }
-  //   };
-  // });
+  /**
+   * @param {number} _id
+   */
 
-  // console.log(JSON.stringify(updatedRestaurants));
-});
+  function addFavoriteRestaurant(_id) {
+    // 1. find the restaurant with the same _id
+    const restaurant = data.allRestaurants.find(restaurant => {
+      return (restaurant._id = _id);
+    });
+
+    // 2. add to the favoritedRestaurants Array
+    data.push(restaurant);
+  }
+
+  return {
+    data,
+    addFavoriteRestaurant
+  };
+})();
+
+const UIController = (function() {
+  /**
+   *
+   * @param {string} restaurantName
+   * @param {number} sortValue
+   * @param {boolean} favorited
+   */
+  function generateTemplate(restaurantName, sortValue, favorited) {
+    return `
+  <div class="row data-id='0' restaurant pb-1 pt-2">
+    <div class="restaurant--name col-4 text-center">
+      ${restaurantName}
+      <span class="favoriteIcon ml-2 ${favorited ? "like" : ""}">
+        <i class="far fa-star"></i>
+      </span>
+    </div>
+    <div class="restaurant--opening-state text-center col-4">
+      Open
+    </div>
+    <div class="restaurant--sortValue col-4 text-center">
+    ${sortValue}
+    </div>
+  </div>
+  `;
+  }
+
+  /**
+   * @param {HTML String} restaurant
+   */
+  function renderRestaurant(restaurant) {
+    // 1. query the list element
+    const resList = document.querySelector(DOMStrings.restaurantList);
+
+    // 2. append to restaurants list
+    resList.insertAdjacentHTML("beforeend", restaurant);
+  }
+
+  return {
+    generateTemplate,
+    renderRestaurant
+  };
+})();
+
+/**
+ *
+ * @param {DataController} DataCtrl
+ * @param {UIController} UICtrl
+ */
+const Controller = (function(DataCtrl, UICtrl) {
+  // 1. get sortOption first
+  const sortOption = document.querySelector(DOMString.sortOptions).value;
+
+  // 2. sort the restaurants array according to the sortOption
+  
+})(DataController, UIController);
