@@ -1,11 +1,19 @@
 .restaurant {
   border-bottom: 1px solid black;
+
+  &--name {
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
 
 .favoriteIcon {
   border-radius: 50%;
   padding: 5px;
-  border: 1px solid gray;
+  height: 30px;
+  width: 30px;
 
   &.liked {
     //favorite will be mark as red by adding class "liked"

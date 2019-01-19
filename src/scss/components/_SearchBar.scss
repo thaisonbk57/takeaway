@@ -4,6 +4,16 @@
   align-items: center;
   background-color: $color-gray-light;
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 10px;
+    position: fixed;
+    width: 100vw;
+    overflow: hidden;
+    top: 0;
+    display: none;
+  }
+
   [name="searchKeyword"] {
     font-size: 14px;
     border: none;
@@ -20,6 +30,10 @@
     &:focus {
       outline: none;
       border: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 10px;
     }
   }
 
