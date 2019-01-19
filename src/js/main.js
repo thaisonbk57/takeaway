@@ -368,17 +368,17 @@ function generateTemplate(restaurant, sortOption, liked = false) {
 
   return `
   <div data-id=${_id} class="row restaurant pb-1 pt-2">
-    <div class="restaurant--name col-4 text-left">
+    <div class="restaurant--name col-6 text-left">
     <span class="favoriteIcon mr-2 ${liked ? "liked" : ""}">
     <i class="far fa-star"></i>
-  </span>${name}
+  </span><span>${name}</span>
     </div>
     <div style='color: ${
       status == "open" ? "green" : status == "order ahead" ? "orange" : "gray"
-    } ' class="restaurant--opening-state text-center col-4">
+    } ' class="restaurant--opening-state text-center col-3">
       ${status}
     </div>
-    <div class="restaurant--sortValue col-4 text-center">${sortValue}</div>
+    <div class="restaurant--sortValue col-3 text-center">${sortValue}</div>
   </div>
   `;
 }
