@@ -367,7 +367,7 @@ function generateTemplate(restaurant, sortOption, liked = false) {
   const sortValue = restaurant.sortingValues[sortOption];
 
   return `
-  <div class="row data-id=${_id} restaurant pb-1 pt-2">
+  <div data-id=${_id} class="row restaurant pb-1 pt-2">
     <div class="restaurant--name col-4 text-left">
     <span class="favoriteIcon mr-2 ${liked ? "liked" : ""}">
     <i class="far fa-star"></i>
@@ -395,11 +395,29 @@ function renderRestaurantToDOM(HTMLString) {
 
 /**
  *
- * @param {number} _id
+ * @param {event Object} e
  */
-function addFavoriteRestaurant(_id) {
-  favoriteRestaurants.push(_id);
+function toggleFavoriteRestaurant(e, cb) {
+  // 1. get _id of the restaurant
+  const _id =
+    e.target.parentElement.parentElement.parentElement.dataset.id ||
+    e.target.parentElement.parentElement.dataset.id;
+
+  // 2. check if the _id is included in favoriteRestaurant
+  if (favoriteRestaurants.indexOf(parseInt(_id)) !== -1) {
+    // 2.1 if YES: remove from favorites
+
+    let index = favoriteRestaurants.indexOf(parseInt(_id));
+    favoriteRestaurants.splice(index, 1);
+  } else {
+    // 2.2 if NO: add to favorites
+    favoriteRestaurants.push(parseInt(_id));
+  }
+
+  // 3. re-render the list
+  cb();
 }
+
 /**
  *
  * @param {Array of restaurants} arr
@@ -505,4 +523,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // run the sortAndRender func on start of the app
   sortAndRender();
+
+  document.getElementById("restaurants").addEventListener("click", function(e) {
+    toggleFavoriteRestaurant(e, sortAndRender);
+  });
 });
