@@ -338,14 +338,14 @@ const restaurants = [
   }
 ];
 
-/////////////////////////////////////////////
-
 const favoriteRestaurants = [1, 2, 0]; //containing _id(s) of restaurants
+
+/////////////////////////////////////////////
 
 /**
  *
  * @param {string} sortOption
- * @param {Array} arr
+ * @param {Array} arr  an array of restaurants
  * function returns a sorted array based on the sortOption
  */
 function sort(sortOption, arr) {
@@ -492,15 +492,17 @@ function sortAndRender(e) {
   });
 }
 
-// trigger the sortAndRender function when user change sortOption
-document
-  .querySelector(DOMStrings.sortOptions)
-  .addEventListener("change", sortAndRender);
+document.addEventListener("DOMContentLoaded", function() {
+  // trigger the sortAndRender function when user change sortOption
+  document
+    .querySelector(DOMStrings.sortOptions)
+    .addEventListener("change", sortAndRender);
 
-// trigger the sortAndRender funciton when user enter a searchKey
-document
-  .querySelector(DOMStrings.searchKeyword)
-  .addEventListener("input", sortAndRender);
+  // trigger the sortAndRender funciton when user enter a searchKey
+  document
+    .querySelector(DOMStrings.searchKeyword)
+    .addEventListener("input", sortAndRender);
 
-// run the sortAndRender func on start of the app
-sortAndRender();
+  // run the sortAndRender func on start of the app
+  sortAndRender();
+});
