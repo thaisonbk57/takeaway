@@ -378,7 +378,9 @@ function generateTemplate(restaurant, sortOption, liked = false) {
     } ' class="restaurant--opening-state text-center col-3">
       ${status}
     </div>
-    <div class="restaurant--sortValue col-3 text-center">${sortValue}</div>
+    <div class="restaurant--sortValue col-3 text-center">${Math.floor(
+      sortValue
+    )}</div>
   </div>
   `;
 }
