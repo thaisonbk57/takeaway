@@ -13,8 +13,8 @@
 
 ### Search​ : Filter restaurants list by searching for restaurant name.
 
-# How to make this work?
+# How to get this project work?
 
-- open the root folder and run `npm install`
-- open terminal at the root folder and run `gulp build`
-- open/serve the file dist/index.html in browser to see the result
+- open the root folder and run `npm install`.
+- open terminal at the root folder and run `gulp build`.
+- open/serve the file dist/index.html in browser to see the result.
