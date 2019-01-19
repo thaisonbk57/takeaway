@@ -1,4 +1,4 @@
-# Quanxua Restaurant (Frontend part)
+# Takeway homework (sort a list of restaurants)
 
 # Features
 
