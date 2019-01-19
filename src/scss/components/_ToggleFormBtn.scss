@@ -1,0 +1,25 @@
+.toggleFormBtn {
+  height: 20px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  box-shadow: 0 1px 4px 0 gray;
+  padding: 2px 3px;
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
+
+  span {
+    height: 2px;
+    width: 100%;
+    display: block;
+    background: red;
+  }
+}

@@ -3,6 +3,12 @@
   justify-content: space-between;
   align-items: center;
   background-color: $color-gray-light;
+  transition: all 0.3s;
+
+  &.show {
+    // display: flex;
+    transform: translateX(0%);
+  }
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -11,7 +17,7 @@
     width: 100vw;
     overflow: hidden;
     top: 0;
-    display: none;
+    transform: translateX(-100%);
   }
 
   [name="searchKeyword"] {

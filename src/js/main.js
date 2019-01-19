@@ -527,4 +527,9 @@ document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("restaurants").addEventListener("click", function(e) {
     toggleFavoriteRestaurant(e, sortAndRender);
   });
+
+  // toggle searchBar on the small screens
+  document.querySelector("#toggleFormBtn").addEventListener("click", () => {
+    document.querySelector("#searchForm").classList.toggle("show");
+  });
 });
